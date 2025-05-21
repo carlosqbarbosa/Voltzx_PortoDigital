@@ -127,21 +127,6 @@ exports.Prisma.UsersScalarFieldEnum = {
   created_at: 'created_at'
 };
 
-exports.Prisma.LandsScalarFieldEnum = {
-  id: 'id',
-  ownerId: 'ownerId',
-  area: 'area',
-  avaliability: 'avaliability',
-  street: 'street',
-  number: 'number',
-  complement: 'complement',
-  district: 'district',
-  city: 'city',
-  state: 'state',
-  postalCode: 'postalCode',
-  country: 'country'
-};
-
 exports.Prisma.LandownersScalarFieldEnum = {
   id: 'id',
   userId: 'userId',
@@ -161,6 +146,21 @@ exports.Prisma.InvestorsScalarFieldEnum = {
   document_id: 'document_id'
 };
 
+exports.Prisma.LandsScalarFieldEnum = {
+  id: 'id',
+  ownerId: 'ownerId',
+  area: 'area',
+  avaliability: 'avaliability',
+  street: 'street',
+  number: 'number',
+  complement: 'complement',
+  district: 'district',
+  city: 'city',
+  state: 'state',
+  postalCode: 'postalCode',
+  country: 'country'
+};
+
 exports.Prisma.ProjectScalarFieldEnum = {
   id: 'id',
   projectId: 'projectId',
@@ -175,6 +175,15 @@ exports.Prisma.ProjectScalarFieldEnum = {
   area: 'area'
 };
 
+exports.Prisma.ProjectProposalScalarFieldEnum = {
+  id: 'id',
+  projectId: 'projectId',
+  landsId: 'landsId',
+  statusProjectProposal: 'statusProjectProposal',
+  createdAt: 'createdAt',
+  ownerAgreeProjectProposal: 'ownerAgreeProjectProposal'
+};
+
 exports.Prisma.InvesimentScalarFieldEnum = {
   id: 'id',
   projectId: 'projectId',
@@ -186,15 +195,6 @@ exports.Prisma.InvesimentScalarFieldEnum = {
   title: 'title',
   description: 'description',
   status: 'status'
-};
-
-exports.Prisma.ProjectProposalScalarFieldEnum = {
-  id: 'id',
-  projectId: 'projectId',
-  landsId: 'landsId',
-  statusProjectProposal: 'statusProjectProposal',
-  createdAt: 'createdAt',
-  ownerAgreeProjectProposal: 'ownerAgreeProjectProposal'
 };
 
 exports.Prisma.SortOrder = {
@@ -223,6 +223,18 @@ exports.StatusApproval = exports.$Enums.StatusApproval = {
   completed: 'completed'
 };
 
+exports.statusProposal = exports.$Enums.statusProposal = {
+  pending: 'pending',
+  accepted: 'accepted',
+  rejected: 'rejected'
+};
+
+exports.OwnerAgreeProposal = exports.$Enums.OwnerAgreeProposal = {
+  pending: 'pending',
+  accepted: 'accepted',
+  rejected: 'rejected'
+};
+
 exports.OwnerAgree = exports.$Enums.OwnerAgree = {
   pending: 'pending',
   accepted: 'accepted',
@@ -241,27 +253,15 @@ exports.StatusInvesiment = exports.$Enums.StatusInvesiment = {
   rejected: 'rejected'
 };
 
-exports.statusProposal = exports.$Enums.statusProposal = {
-  pending: 'pending',
-  accepted: 'accepted',
-  rejected: 'rejected'
-};
-
-exports.OwnerAgreeProposal = exports.$Enums.OwnerAgreeProposal = {
-  pending: 'pending',
-  accepted: 'accepted',
-  rejected: 'rejected'
-};
-
 exports.Prisma.ModelName = {
   Users: 'Users',
-  Lands: 'Lands',
   landowners: 'landowners',
   companies: 'companies',
   investors: 'investors',
+  Lands: 'Lands',
   Project: 'Project',
-  Invesiment: 'Invesiment',
-  projectProposal: 'projectProposal'
+  projectProposal: 'projectProposal',
+  Invesiment: 'Invesiment'
 };
 
 /**
